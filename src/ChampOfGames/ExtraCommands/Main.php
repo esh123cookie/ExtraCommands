@@ -14,7 +14,7 @@ class Main extends PluginBase{
 	 
 	public $fts = "§4[§bExtraCommands§4]";
  
-	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool {
+	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) {
     
    if($cmd->getName() == "food") {
      if($sender instanceof Player) {
