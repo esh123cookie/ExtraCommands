@@ -140,7 +140,6 @@ foreach($this->getServer()->getOnlinePlayers() as $player) {
 if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("nv.use")){
-                   if($sender->instanceof Player){
 $sender->sendMessage($this->fts .TF::RED . "Syntax nv on|off");
 			  if($args[0] == "on"){
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
