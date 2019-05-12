@@ -143,7 +143,7 @@ if($cmd->getName() == "nv") {
 			if(empty($args[0])) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>");
 			}
-			  if($args[0] == "on")
+			  if($args[0] == "on"){
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 				$sender->sendMessage($this->fts . TF::GREEN . " Night vision activated");
                 return true;
@@ -160,6 +160,7 @@ if($cmd->getName() == "nv") {
 		
 	  return true;
 	     }
+    }
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
