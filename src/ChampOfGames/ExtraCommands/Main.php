@@ -202,7 +202,6 @@ if($cmd->getName() == "vanish") {
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
 	  return true;
 	     }
-            }
 	  }
       }
 }
