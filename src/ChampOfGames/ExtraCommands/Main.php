@@ -18,7 +18,7 @@ class Main extends PluginBase{
    if($cmd->getName() == "food") {
      if($sender instanceof Player) {
      if($sender->hasPermission("food.use")) {    
-     	$sender->getInventory()->addItem(Item::get(297, 0, 8));
+     	$sender->getInventory()->addItem(Item::get(Item::BREAD, 0, 8));
      	$sender->getlevel()->addSound(new PopSound($sender));
          $sender->sendMessage($this->fts . TF::GREEN . "You have got bread!");
 	 }else{ 
@@ -139,7 +139,7 @@ foreach($this->getServer()->getOnlinePlayers() as $player) {
 if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("nv.use")) 
-			if(!empty($args[0])) {
+			if(empty($args[0])) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>");
 			}
 			  if($args[0] == "on")
@@ -162,7 +162,7 @@ if($cmd->getName() == "nv") {
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
-			if(!empty($args[0])) {
+			if(empty($args[0])) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /vanish <on/off>");
 			}
 			  if($args[0] == "on") {
@@ -189,7 +189,7 @@ if($cmd->getName() == "vanish") {
 	if($cmd->getName() == "fly"){
         if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
-			if(!empty($args[0])) {
+			if(empty($args[0])) {
 		 		$sender->sendMessage($this->fts . TF::RED . "Syntax fly <on/off>");
 			  if($args[0] == "on") {
 				$sender->setAllowFlight(true);
