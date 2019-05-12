@@ -201,5 +201,7 @@ if($cmd->getName() == "vanish") {
 	  return true;
 	     }
 	  }
+         }
+      }
     }
 }
