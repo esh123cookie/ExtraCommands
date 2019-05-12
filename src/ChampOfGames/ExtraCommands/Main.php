@@ -139,7 +139,7 @@ foreach($this->getServer()->getOnlinePlayers() as $player) {
 		
 if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
-		if($sender->hasPermission("nv.use")) 
+		if($sender->hasPermission("nv.use")) {
 			if(empty($args[0])) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>");
 			}
