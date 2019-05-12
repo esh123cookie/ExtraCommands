@@ -205,3 +205,4 @@ if($cmd->getName() == "vanish") {
       }
     }
 }
+}
