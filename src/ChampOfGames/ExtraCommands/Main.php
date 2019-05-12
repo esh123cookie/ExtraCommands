@@ -180,9 +180,8 @@ if($cmd->getName() == "vanish") {
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
 		
 	  return true;
-	     }
+	    }
 }
- 
 	if($cmd->getName() == "fly"){
         if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
@@ -204,5 +203,4 @@ if($cmd->getName() == "vanish") {
          }
       }
     }
-}
 }
