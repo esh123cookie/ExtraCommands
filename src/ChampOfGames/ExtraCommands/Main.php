@@ -141,7 +141,7 @@ if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("nv.use")){
                    if($sender->instanceof Player){
-$sender->sendMessage($this->fts .TF::RED . Syntax nv on|off
+$sender->sendMessage($this->fts .TF::RED . Syntax nv on|off);
 			  if($args[0] == "on"){
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 				$sender->sendMessage($this->fts . TF::GREEN . " Night vision activated");
@@ -165,7 +165,6 @@ if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
 				$sender->sendMessage($this->fts . TF::RED . " Syntax /vanish on|off");
-			}
 			  if($args[0] == "on") {
                                 $sender->setDisplayName($sender->getName());
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::INVISIBILITY), (99999999*20), (1), (false)));
@@ -184,7 +183,6 @@ if($cmd->getName() == "vanish") {
 		
 	  return true;
 	     }
-	  }
 }
  
 	if($cmd->getName() == "fly"){
@@ -204,7 +202,7 @@ if($cmd->getName() == "vanish") {
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
 	  return true;
 	     }
+            }
 	  }
       }
-}
 }
