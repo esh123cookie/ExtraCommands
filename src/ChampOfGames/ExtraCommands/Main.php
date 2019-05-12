@@ -160,7 +160,6 @@ $sender->sendMessage($this->fts .TF::RED . "Syntax nv on|off");
 	  return true;
 	     }
     }
-}
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
