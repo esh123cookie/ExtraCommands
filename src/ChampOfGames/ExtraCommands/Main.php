@@ -14,7 +14,7 @@ class Main extends PluginBase{
 	 
 	public $fts = "§4[§bExtraCommands§4]";
  
-	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool {
+	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args):bool {
     
    if($cmd->getName() == "food") {
      if($sender instanceof Player) {
@@ -139,10 +139,9 @@ foreach($this->getServer()->getOnlinePlayers() as $player) {
 		
 if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
-		if($sender->hasPermission("nv.use")) {
-			if(empty($args[0])) {
-				$sender->sendMessage($this->fts . TF::RED . " Syntax /nv <on/off>");
-			}
+		if($sender->hasPermission("nv.use")){
+                   if($sender->instanceof Player){
+$sender->sendMessage($this->fts .TF::RED . Syntax nv on|off
 			  if($args[0] == "on"){
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 				$sender->sendMessage($this->fts . TF::GREEN . " Night vision activated");
@@ -165,8 +164,7 @@ if($cmd->getName() == "nv") {
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
-			if(empty($args[0])) {
-				$sender->sendMessage($this->fts . TF::RED . " Syntax /vanish <on/off>");
+				$sender->sendMessage($this->fts . TF::RED . " Syntax /vanish on|off");
 			}
 			  if($args[0] == "on") {
                                 $sender->setDisplayName($sender->getName());
@@ -192,8 +190,7 @@ if($cmd->getName() == "vanish") {
 	if($cmd->getName() == "fly"){
         if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
-			if(empty($args[0])) {
-		 		$sender->sendMessage($this->fts . TF::RED . "Syntax fly <on/off>");
+		 		$sender->sendMessage($this->fts . TF::RED . "Syntax fly on|off");
 			  if($args[0] == "on") {
 				$sender->setAllowFlight(true);
 				$sender->sendMessage($this->fts . TF::GREEN . " Flymode activated");
