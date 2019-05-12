@@ -8,7 +8,8 @@ use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\Player;
 use pocketmine\level\sound\PopSound;
- 
+use pocketmine\item\Item;
+
 class Main extends PluginBase{
 	 
 	public $fts = "§4[§bExtraCommands§4]";
