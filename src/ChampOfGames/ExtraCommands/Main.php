@@ -183,6 +183,7 @@ if($cmd->getName() == "vanish") {
 	  return true;
 	    }
 }
+}
 	if($cmd->getName() == "fly"){
         if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
@@ -201,6 +202,5 @@ if($cmd->getName() == "vanish") {
 	  return true;
 	     }
 	  }
-         }
     }
 }
