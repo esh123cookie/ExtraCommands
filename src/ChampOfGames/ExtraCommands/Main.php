@@ -140,7 +140,6 @@ foreach($this->getServer()->getOnlinePlayers() as $player) {
 if($cmd->getName() == "nv") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("nv.use")){
-$sender->sendMessage($this->fts .TF::RED . "Syntax nv on|off");
 			  if($args[0] == "on"){
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::NIGHT_VISION), (99999999*20), (1), (false)));
 				$sender->sendMessage($this->fts . TF::GREEN . " Night vision activated");
@@ -155,7 +154,8 @@ $sender->sendMessage($this->fts .TF::RED . "Syntax nv on|off");
 		     }
 		  }else{
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
-		
+		  }else{
+$sender->sendMessage($this->fts .TF::RED . "Syntax /nv on|off");
 	  return true;
 	     }
     }
@@ -163,7 +163,6 @@ $sender->sendMessage($this->fts .TF::RED . "Syntax nv on|off");
 if($cmd->getName() == "vanish") {
 	  if($sender instanceof Player) {
 		if($sender->hasPermission("vanish.use")) {
-				$sender->sendMessage($this->fts . TF::RED . " Syntax /vanish on|off");
 			  if($args[0] == "on") {
                                 $sender->setDisplayName($sender->getName());
 				$sender->addEffect(new EffectInstance(Effect::getEffect(Effect::INVISIBILITY), (99999999*20), (1), (false)));
@@ -179,7 +178,8 @@ if($cmd->getName() == "vanish") {
 		     }
 		  }else{
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
-		
+		  }else{
+$sender->sendMessage($this->fts .TF::RED . "Syntax /vanish on|off");
 	  return true;
 	    }
 }
@@ -187,7 +187,6 @@ if($cmd->getName() == "vanish") {
 	if($cmd->getName() == "fly"){
         if($sender instanceof Player){
         if($sender->hasPermission("fly.use")){
-		 		$sender->sendMessage($this->fts . TF::RED . "Syntax fly on|off");
 			  if($args[0] == "on") {
 				$sender->setAllowFlight(true);
 				$sender->sendMessage($this->fts . TF::GREEN . " Flymode activated");
@@ -199,6 +198,8 @@ if($cmd->getName() == "vanish") {
 		     }
 		  }else{
 		  $sender->sendMessage($this->fts . TF::RED . " You are not allowed to use this command");
+                  }else{
+$sender->sendMessage($this->fts .TF::RED . "Syntax /fly on|off");
 	  return true;
 	     }
 	  }
